@@ -3,10 +3,12 @@
         <!-- works but reloads the whole page -->
         <!-- <a href="/elements">Elements</a> -->
         <!-- this changes the content of the page ONLY-->
+        <a routerLink="" class="item">Home</a>
         <a routerLink="/elements" routerLinkActive="active" class="item">Elements</a>
         <a routerLink="/collections" routerLinkActive="active" class="item">Collections</a>
     </div>
-</div>
-<div class="ui segment">
-    <router-outlet></router-outlet>
+
+    <div class="ui segment">
+        <router-outlet></router-outlet>
+    </div>
 </div>

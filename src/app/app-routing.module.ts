@@ -5,6 +5,20 @@ import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes: Routes = [
   {
+    path: 'elements',
+    // lazy loading
+    loadChildren: () =>
+      import('./elements/elements.module').then((m) => m.ElementsModule),
+  },
+  {
+    path: 'collections',
+    // lazy loading
+    loadChildren: () =>
+      import('./collections/collections.module').then(
+        (m) => m.CollectionsModule
+      ),
+  },
+  {
     path: '',
     component: HomeComponent,
   },
