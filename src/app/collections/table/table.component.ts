@@ -6,11 +6,10 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./table.component.scss'],
 })
 export class TableComponent implements OnInit {
-  // aliasing 'className' with 'class'
+  @Input() data = [] as any;
+  @Input() headers = [] as any;
+  // @Input aliasing, 'class' will be reassigned to 'classNames'
   @Input('class') classNames = '';
-  // STUFF BELOW NOT WORKING
-  // @Input() data = [];
-  // @Input() headers = [];
 
   constructor() {}
 

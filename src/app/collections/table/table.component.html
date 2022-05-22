@@ -1,20 +1,16 @@
-<table class="ui table" [ngClass]="classNames">
+<table [ngClass]="classNames" class="ui table">
     <thead>
         <tr>
-            <!-- STUFF BELOW NOT WORKING -->
-            <!-- <th *ngFor="let header of headers">
+            <th *ngFor="let header of headers">
                 {{ header.label }}
-            </th> -->
+            </th>
         </tr>
     </thead>
     <tbody>
-        <!-- STUFF BELOW NOT WORKING -->
-        <!-- <tr *ngFor="let record of data">
-            
+        <tr *ngFor="let record of data">
             <td *ngFor="let header of headers">
                 {{ record[header.key] }}
             </td>
-        </tr> -->
+        </tr>
     </tbody>
-
 </table>
