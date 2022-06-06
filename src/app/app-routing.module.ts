@@ -19,6 +19,12 @@ const routes: Routes = [
       ),
   },
   {
+    path: 'views',
+    // lazy loading
+    loadChildren: () =>
+      import('./views/views.module').then((m) => m.ViewsModule),
+  },
+  {
     path: '',
     component: HomeComponent,
   },

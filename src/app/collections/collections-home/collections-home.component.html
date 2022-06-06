@@ -3,3 +3,15 @@
 </app-divider>
 
 <app-table [data]="data" [headers]="headers" class="striped celled"></app-table>
+
+<app-divider>Tab Menu</app-divider>
+<app-tabs>
+    <!-- routerLink is basically RELATIVE REFERENCES -->
+    <a [routerLinkActiveOptions]="{exact: true}" class="item" routerLink="./" routerLinkActive="active">Biography</a>
+    <!-- routerLink can be used with ABSOLUTE REFERENCES too
+            <a class="item" routerLink="/collections" routerLinkActive="active">Biography</a> -->
+    <!-- routerLink can be used with PROPERTY BINDING too -->
+    <!-- <a class="item" [routerLink]="['./']" routerLinkActive="active">Biography</a> -->
+    <a class="item" routerLink="./companies" routerLinkActive="active">Companies</a>
+    <a class="item" routerLink="./partners" routerLinkActive="active">Partners</a>
+</app-tabs>
